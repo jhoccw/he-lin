@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喝拎 Good to Drink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            min-height: 100vh;
+            overflow: hidden; /* Prevent scrollbars from bubbles */
+        }
+
+        /* Custom Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(110vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-20vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(8px);
+            z-index: 0;
+            animation: float linear infinite;
+        }
+        .kv {
+        	margin-top: 40px;
+        }
+        .kv img{
+        	margin-top:40px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-[#FFE1AD] to-[#F4B967] flex items-center justify-center p-6 relative">
+
+    <div class="bubble bg-[#391400] w-32 h-32" style="left: 10%; animation-duration: 15s; animation-delay: -2s;"></div>
+    <div class="bubble bg-[#391400] w-48 h-48" style="left: 60%; animation-duration: 18s; animation-delay: -7s;"></div>
+    <div class="bubble bg-[#391400] w-24 h-24" style="left: 85%; animation-duration: 12s; animation-delay: -4s;"></div>
+
+    <div class="bubble bg-[#9E694C] w-20 h-20" style="left: 30%; animation-duration: 10s; animation-delay: -1s;"></div>
+    <div class="bubble bg-[#9E694C] w-40 h-40" style="left: 45%; animation-duration: 20s; animation-delay: -15s;"></div>
+    <div class="bubble bg-[#9E694C] w-16 h-16" style="left: 75%; animation-duration: 14s; animation-delay: -5s;"></div>
+    <div class="bubble bg-[#9E694C] w-28 h-28" style="left: 15%; animation-duration: 16s; animation-delay: -8s;"></div>
+
+    <div class="kv relative z-10 flex flex-col items-center justify-center pointer-events-none select-none">
+        <img src="assets/title@2x.webp" width="280px" alt="">
+        <img src="assets/screen@2x.webp" width="500px" alt="">
+    </div>
+
+</body>
+</html>
